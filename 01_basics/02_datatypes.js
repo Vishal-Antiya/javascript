@@ -25,7 +25,7 @@ console.log(typeof null);       //object
 console.log(typeof undefined);  //undefined
 
 
-/****************************NON-PRIMITIVE DATATYPES*********************************/
+/****************************REFERENCE / NON-PRIMITIVE DATATYPES*********************************/
 
 /*
 arrays,
