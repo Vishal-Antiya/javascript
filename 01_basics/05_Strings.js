@@ -5,7 +5,7 @@ const repoCount = 50
 
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
-const gameName = new String('vishal-antiya')
+const gameName = new String('vishal-antiya') // This is a STRING OBJECT, created using the 'String()' function
 
 console.log(gameName[0]);
 console.log(gameName.__proto__);
