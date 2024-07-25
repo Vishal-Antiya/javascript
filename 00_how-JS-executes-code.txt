@@ -1,0 +1,15 @@
+1. global execution context
+2. function execution context
+
+
+each execution context has 2 phases -memory phase
+                                    -execution phase
+
+-IN GLOBAL EXECUTION CONTEXT:
+    Memory phase includes assigning memory to all the declared variables in the code one by one.
+    Once that is done the execution phase will take over to generate the desired output.
+
+-If in the code somewhere there is a function then inside the global execution context another function execution
+context will be made. it will have its own memory phase as well as its own execution phase.
+
+-If the global execution context is a square then, when it reaches the function another square will be formed inside of it.
