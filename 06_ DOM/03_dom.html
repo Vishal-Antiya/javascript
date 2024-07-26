@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:antiquewhite">
+    
+</body>
+
+<script>
+    const div =  document.createElement('div')
+    
+    div.className = "main"
+    div.id = Math.floor( Math.random() * 100)
+    div.setAttribute("title", "Vishal Antiya")
+
+    div.style.backgroundColor = ('purple')
+    div.style.padding = '15px'
+
+    // div.innerText = "dom wid vishal"    
+    const addText = document.createTextNode("DOM wid Vishal")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+    console.log(div); 
+</script>
+</html>
