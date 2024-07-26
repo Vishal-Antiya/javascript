@@ -1,0 +1,31 @@
+DOM stands for Document Object Model.
+every html page has a dom which represents how the page works and can help you reach the desired part of the html page.
+a dom always starts with a window, followed by a document then a html.
+
+                        ____________
+                        |           |
+                        |   Window  |
+                        |___________|
+                              |
+                             \|/
+                        ____________
+                        |           |
+                        |  document |
+                        |___________|
+                              |
+                             \|/
+                        ____________       ___________
+                        |           |     |           |
+                        |   HTML    |---->|  body     |
+                        |___________|     |___________|
+                              |
+                             \|/
+                        ____________
+                        |           |
+                        |   head    |
+                        |___________|
+                              |
+                             \|/
+
+after this to head and body you add the attributes, the class,the meta tags, the text nodes or anything else it contains.
+      

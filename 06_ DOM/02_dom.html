@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with Vishal</title>
+</head>
+<body style="background-color: #212121; color:antiquewhite">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);                //selected the class parent
+    // console.log(parent.children);       //'.children' can be used to access the children of any parent class. it will return an HTML collection of the children in the given parent value.
+    // console.log(parent.children[1]);    //'.children[0]' can be used to access the children one by one, just like in an array. 
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].textContent);    //op: Monday  Tuesday   Wednesday   Thursday  Friday
+    // }
+    
+    parent.style.backgroundColor = ("purple")
+    parent.style.padding = '15px'
+    parent.style.borderRadius = '15px'
+    parent.children[1].style.color=("yellow")
+    parent.children[3].style.color=("yellow")
+    // console.log(parent.firstElementChild.textContent);
+    // console.log(parent.lastElementChild.textContent);
+    
+    const day1 = document.querySelector('.day')
+    // console.log(day1);              // this is a way to go for getting a parent element from a child element.
+    // console.log(day1.parentElement);//querySelector is an expensive function, since it has to traverse the whole DOM tree just to select a query.
+    // console.log(day1.nextElementSibling);
+
+    console.log("nodes: ", parent.childNodes); //op: 11 // gives a NodeList of all the nodesin the parent. the text, the line change, are also counted as nodesss.
+
+</script>
+</html>
