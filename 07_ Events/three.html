@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Jai Shree Ram</h1>
+    <div style="background-color: orange;">
+        <h2 id="clock"></h2>
+    </div>
+    <button id="start">START</button><br> <br>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    //setInterval
+    let timer;
+    const time = document.querySelector('#clock')
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+    
+    const clockStart = function(){
+        timer = setInterval(() => {
+            let date = new Date
+            time.innerHTML = (`${date.toLocaleTimeString()}`)
+        }, 1000);
+    }
+    
+    start.addEventListener('click', clockStart)
+
+    stop.addEventListener('click', (e)=>{
+        clearInterval(timer)
+    })
+
+    
+</script>
+</html>
