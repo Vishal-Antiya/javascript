@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+        }
+
+        .card {
+            background-color: #515151;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #222;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body >
+    <div class="container">
+
+        <div class="card" style="background-color: #414141;">
+            <img src="" alt="" id="img">
+            <h2 id="name"></h2>
+            <p id="followers"></p>
+        </div>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/Vishal-Antiya'
+    const img = document.querySelector('#img')
+    const name = document.querySelector('#name')
+    const followers = document.querySelector('#followers')
+
+    const xhr = new XMLHttpRequest()
+
+    xhr.open('GET', requestUrl)
+    xhr.send()
+
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState == 4){
+            const data = JSON.parse(this.responseText);
+            name.innerHTML = data.name
+            img.setAttribute('src', data.avatar_url)
+            followers.innerHTML = `Followers: ${data.followers}`
+        }
+    }
+</script>
+</html>
